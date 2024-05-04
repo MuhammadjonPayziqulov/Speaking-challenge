@@ -98,7 +98,8 @@ function App() {
   }, [topic])
 
   useEffect(() => {
-    const topic = JSON.parse(localStorage.getItem("topic"));
+    const getTopic = localStorage.getItem("topic")
+    const topic = JSON.parse(getTopic as string);
     setTopic(topic)
   }, [])
 
