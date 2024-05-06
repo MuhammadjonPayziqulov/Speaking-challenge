@@ -3,79 +3,6 @@ import { Box, Typography, Divider, Accordion, AccordionSummary, AccordionDetails
 import { useState, useEffect, ChangeEvent } from "react"
 import { Form } from "./components/Form";
 
-const demoSpeaking = [
-  {
-    title: "Describe a period of time from your studies that was the most difficult for you so far.",
-    say_1: "When it was",
-    say_2: "Why was it hard",
-    say_3: "What you were doing at that time",
-    done: false
-  },
-  {
-    title: "Describe the job or career you have or hope to have.",
-    say_1: "What the job is",
-    say_2: "What it involves",
-    say_3: "Why you chose it and explain why you are interested in this job",
-    done: false
-  },
-  {
-    title: "Describe a time when you were ill.",
-    say_1: "When was this?",
-    say_2: "What were your symptoms?",
-    say_3: "How long did the illness last and how it affected your life at the time?",
-    done: false
-  },
-  {
-    title: "Describe a hobby that you enjoy doing.",
-    say_1: "What the hobby is",
-    say_2: "How you got interested in it",
-    say_3: "What you do when you engage in this hobby and explain why you enjoy doing this hobby and how it benefits you.",
-    done: false
-  },
-  {
-    title: "Describe a gift you recently gave to someone.",
-    say_1: "Who you gave it to",
-    say_2: "What the gift was",
-    say_3: "What occasion the gift was for and explain why you chose that gift.",
-    done: false
-  },
-  {
-    title: "Describe an environmental problem or event.",
-    say_1: "What is it",
-    say_2: "Where is it happening",
-    say_3: "What problems does it cause",
-    done: false
-  },
-  {
-    title: "Describe your hometown.",
-    say_1: "Where it is located",
-    say_2: "What languages are spoken there",
-    say_3: "What are the advantages and disadvantages of living there",
-    done: false
-  },
-  {
-    title: "Talk about your favorite social media site or application.",
-    say_1: "Why you use it ",
-    say_2: "How often you use it ",
-    say_3: "And if you recommend it to others",
-    done: false
-  },
-  {
-    title: "Describe a movie that you like.",
-    say_1: "When you watched it",
-    say_2: "What it was about",
-    say_3: "And explain why you like it",
-    done: false
-  },
-  {
-    title: "Talk about a food that you tried and didn't like.",
-    say_1: "What it was",
-    say_2: "Why you didn't like it",
-    say_3: "If you will try it again",
-    done: false
-  }
-]
-
 export interface ITopic {
   title: string;
   say_1: string;
@@ -87,7 +14,7 @@ export interface ITopic {
 
 
 function App() {
-  const [topic, setTopic] = useState<ITopic[]>(demoSpeaking)
+  const [topic, setTopic] = useState<ITopic[]>([])
   const [loading, setLoading] = useState(true);
   const [open, setOpen] = useState<boolean>(false);
 
