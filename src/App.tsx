@@ -115,7 +115,7 @@ function App() {
                     {el.say_3}
                   </AccordionDetails>
                   <AccordionDetails>
-                    <TextField label="Notes" sx={{ width: "60%" }} value={el.notes}
+                    <TextField label="Notes" multiline sx={{ width: "60%" }} value={el.notes}
                       onChange={(e) => handleNote(e, i)} />
                   </AccordionDetails>
                 </Accordion>
